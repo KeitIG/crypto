@@ -14,7 +14,7 @@ In a form:
 ?>
 
 <input type="hidden" name="clear_value" value="<?php echo $value ?>" />
-<input type="hidden" name="encrypted_value" value="<?php echo Crypto::encrypt($value, 2) ?>" />
+<input type="hidden" name="encrypted_value" value="<?php echo Crypto::encrypt($value, $salt_key) ?>" />
 ```
 
 In your controller (for example):
